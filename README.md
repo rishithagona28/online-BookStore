@@ -43,10 +43,8 @@ On top of that base, I added:
 
 ## 🗂️ Project structure
 
-The source code is inside `bookstore-main.zip`:
-
 ```
-bookstore-main/
+online-BookStore/
 ├── home.php, shop.php, search_page.php, Best-seller.php, about.php, contact.php
 ├── cart.php, checkout.php, orders.php          # customer flow
 ├── admin_page.php, admin_products.php, admin_orders.php,
@@ -62,7 +60,8 @@ bookstore-main/
 ## 🚀 Run it locally (XAMPP)
 
 1. Install **[XAMPP](https://www.apachefriends.org/)** and start **Apache** and **MySQL**.
-2. Unzip `bookstore-main.zip` into `C:\xampp\htdocs\` (you should end up with `htdocs\bookstore-main\`).
+2. Download this repo (green **Code** button → **Download ZIP**), unzip it, and copy the folder into
+   `C:\xampp\htdocs\` renamed to **`bookstore`**, so you have `htdocs\bookstore\home.php`.
 3. Open **http://localhost/phpmyadmin**, create a database named **`books`**, open its **SQL** tab and run the
    contents of the `dbqueries` file.
 4. Still in the SQL tab, add the two columns used by the genre feature:
@@ -73,7 +72,7 @@ bookstore-main/
      ADD `description` TEXT NULL;
    ```
 
-5. Visit **http://localhost/bookstore-main/register.php**, create an account with type **admin**, then another with
+5. Visit **http://localhost/bookstore/register.php**, create an account with type **admin**, then another with
    type **user**, and log in.
 
 `config.php` connects with MySQL user `root` and an empty password, which is XAMPP's default. Edit it if yours is different.
